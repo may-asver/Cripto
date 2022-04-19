@@ -12,6 +12,7 @@ import Numeros_pseudoaleatorios.main_pseudo as pseudos
 PORT = 1000
 SERVER_ADDR = ('localhost', PORT)
 SIZE_NUMBER = 32
+SIZE_BUFF = SIZE_NUMBER * 8
 
 
 def create_Server():
@@ -26,7 +27,7 @@ def create_Server():
             print('connection from', client_address)
             # Receive the data and send pseudorandom number
             while True:
-                data = connection.recv(SIZE_NUMBER)
+                data = connection.recv(SIZE_BUFF)
                 if data.decode() == '0':
                     connection.close()
                     print("connection closed")

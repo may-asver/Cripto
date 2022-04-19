@@ -12,6 +12,7 @@ import readchar
 PORT = 1000
 SERVER_ADDR = ('localhost', PORT)
 SIZE_NUMBER = 32
+SIZE_BUFF = SIZE_NUMBER * 8
 
 
 def client():
@@ -25,7 +26,7 @@ def client():
                 sock.close()
                 break
             sock.send(send)
-            number_received = sock.recv(SIZE_NUMBER)
+            number_received = sock.recv(SIZE_BUFF)
             print(number_received.decode())
     except Exception as e:
         print("Error on client: ", e)
