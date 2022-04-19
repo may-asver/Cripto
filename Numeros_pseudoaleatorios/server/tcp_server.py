@@ -33,6 +33,8 @@ def create_Server():
                     print("connection closed")
                     break
                 connection.send(pseudos.random_Number(SIZE_NUMBER))
+            if data.decode() == '0':
+                break
         except Exception as e:
             print("Error on server: ", e)
         finally:
