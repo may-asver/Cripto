@@ -1,5 +1,5 @@
 """
-    Script to print random hex numbers with PyNaCl
+    Script to print random numbers with base64 using PyNaCl
     Author: Maya Aguirre
     Date: 05/04/2022
 """
