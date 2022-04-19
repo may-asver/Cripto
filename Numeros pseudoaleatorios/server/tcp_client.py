@@ -18,18 +18,21 @@ def client():
     sock = socket.socket()  # Create socket
     sock.connect(SERVER_ADDR)
     try:
+        # Receive the number and print pseudorandom number on base64 format
         while True:
             send = readchar.readchar()
             if send.decode() == '0':
                 sock.close()
                 break
             sock.send(send)
-            number_received = sock.recv(16)
+            number_received = sock.recv(SIZE_NUMBER)
             print(number_received.decode())
     except Exception as e:
         print("Error on client: ", e)
     finally:
+        # Clean connection
         sock.close()
 
 
 client()
+

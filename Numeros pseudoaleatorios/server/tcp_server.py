@@ -24,9 +24,9 @@ def create_Server():
         connection, client_address = sock.accept()
         try:
             print('connection from', client_address)
-            # Receive the data and retransmit it
+            # Receive the data and send pseudorandom number
             while True:
-                data = connection.recv(16)
+                data = connection.recv(SIZE_NUMBER)
                 if data.decode() == '0':
                     connection.close()
                     print("connection closed")
