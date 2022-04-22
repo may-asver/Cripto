@@ -1,18 +1,16 @@
 """
-    Script open a TCP server and generate pseudorandom
+    Script open a TCP server to receive a file.
     numbers.
     Author: Maya Aguirre.
 
-    Date: 13/04/2022
+    Date: 21/04/2022
 """
 import socket
-import Numeros_pseudoaleatorios.main_pseudo as pseudos
 
 # Global consts
 PORT = 1000
 SERVER_ADDR = ('localhost', PORT)
-SIZE_NUMBER = 8
-SIZE_BUFF = SIZE_NUMBER * 8
+SIZE_BUFF = 1024
 
 
 def create_Server():
@@ -22,14 +20,14 @@ def create_Server():
     while True:
         # Wait for a connection
         print('waiting for a connection')
-        # Connect to client
-        connection, client_address = sock.accept()
         try:
+            # Connect to client
+            connection, client_address = sock.accept()
             print('connection from', client_address)
-            file_name = connection.recv(SIZE_BUFF).decode()
-            print(file_name)
-            #filesize = int(connection.recv(SIZE_BUFF).decode())
-            manage_file(file_name, connection)
+            # Receive file
+            file_name = connection.recv(SIZE_BUFF).decode()  # Receive file's name
+            print(file_name)  # Show file's name
+            manage_file(file_name, connection)  # Save file
             break
             # Clean up the connection
             connection.close()
@@ -48,9 +46,9 @@ def manage_file(filename, connection):
             file = open(filename, "w")
             file.write(data.decode())
         if not data:
+            file.flush()
+            file.close()
             break
-    file.close()
-
 
 
 create_Server()
