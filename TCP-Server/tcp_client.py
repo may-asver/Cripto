@@ -20,13 +20,11 @@ def client():
     try:
         file = open("C:\\Users\\Maya\\Desktop\\" + FILENAME, "r")  # Read file
         sock.send(FILENAME.encode())  # Send filename
-        while True:
-            data = file.read(SIZE_BUFF // 8)
+        data = file.read(SIZE_BUFF // 8)
+        while data:
             sock.send(data.encode())
-            if not data:
-                file.flush()
-                file.close()
-                break
+            data = file.read(SIZE_BUFF // 8)
+        file.close()
     except Exception as e:
         print("Error on client: ", e)
     finally:
