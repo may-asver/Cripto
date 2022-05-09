@@ -35,10 +35,6 @@ def verifyMessage(message, key):
         return False
 
 
-def getMessage(key):
-    return key
-
-
 def verifyKey(key: bytes):
     verify = VerifyKey(key, encoder=HexEncoder)
     if verify:
