@@ -22,7 +22,7 @@ def client():
     sock = socket.socket()  # Create socket
     sock.connect(SERVER_ADDR)
     try:
-        file = open(FILENAME, "r", encoding='latin-1')  # Read file
+        file = open(FILENAME, "r", encoding='utf-8')  # Read file
         message = signfile.signMessage(SIGN_KEY, FILENAME.encode())
         sock.send(KEY)  # Send key to decrypt
         sock.send(SIGN_KEY_VERIFIED)  # Send sign key
