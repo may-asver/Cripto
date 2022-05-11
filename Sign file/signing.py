@@ -12,7 +12,7 @@ from nacl.encoding import HexEncoder
 # Create a verified key
 def generateVerifiedSign(sign_key):
     verified = sign_key.verify_key
-    return verified.encode(encoder=HexEncoder)
+    return verified.encode()
 
 
 def generateKey():
@@ -36,7 +36,7 @@ def verifyMessage(message, key):
 
 
 def verifyKey(key: bytes):
-    verify = VerifyKey(key, encoder=HexEncoder)
+    verify = VerifyKey(key)
     if verify:
         return verify
     else:

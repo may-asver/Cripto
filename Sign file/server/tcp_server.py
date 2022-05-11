@@ -31,7 +31,7 @@ def create_server():
             print('connection from', client_address)
             # Receive file's name and decrypt
             check = signing.verifyMessage(decr.decrypt(connection.recv(SIZE_BUFF), KEY), SIGN_KEY)
-            file_name = check.decode() if check else ""
+            file_name = check.decode('windows-1252', "replace") if check else ""
             if not file_name:
                 print("Sign key failure")
                 connection.close()
@@ -52,7 +52,7 @@ def manage_file(filename, connection, key, sign_key):
     while verified:
         try:
             file = open(filename, "x")
-            file.write(verified.decode('latin-1'))
+            file.write(verified.decode('windows-1252', 'replace'))
         except:
             f_name = ""
             num = 0
@@ -65,7 +65,7 @@ def manage_file(filename, connection, key, sign_key):
             extension = (str(num) + '.' + filename.split('.')[1])
             f_name += extension
             file = open(f_name, "w")
-            file.write(verified.decode('latin-1'))
+            file.write(verified.decode('windows-1252', 'replace'))
             print(f_name)
         data = connection.recv(SIZE_BUFF)
         verified = signing.verifyMessage(decr.decrypt(data, key), sign_key)

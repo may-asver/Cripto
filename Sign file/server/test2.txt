@@ -1,24 +1,23 @@
 Testing sign and encrypt a file.
+The LPCXpresso™ family of boards provides a powerful and flexible development system
+for NXP's LPC Cortex®-M family of MCUs. They can be used with a wide range of
+development tools, including NXP’s MCUXpresso IDE, Keil uVISION and IAR Embedded
+Workbench. The LPCXpresso55S69 board (order code LPC55S69-EVK) and
+LPCXpresso55S28 board (order code LPC55S28-EVK) are the evaluation and
+development platforms for the LPC55S6x and LPC55S2x/LPC552x families of MCUs
+respectively.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum justo vitae ex vulputate 
-commodo. Cras non aliquam erat. Curabitur vel odio vulputate, bibendum nisl vitae, tristique ipsum. Sed 
-commodo sit amet orci non placerat. Vivamus finibus porttitor augue eu porttitor. Morbi vehicula fermentum 
-sapien vitae vulputate. Donec semper magna metus, quis feugiat diam tincidunt at. Nullam auctor augue a 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum justo vitae ex vulputate
+commodo. Cras non aliquam erat. Curabitur vel odio vulputate, bibendum nisl vitae, tristique ipsum. Sed
+commodo sit amet orci non placerat. Vivamus finibus porttitor augue eu porttitor. Morbi vehicula fermentum
+sapien vitae vulputate. Donec semper magna metus, quis feugiat diam tincidunt at. Nullam auctor augue a
 erat malesuada vestibulum.
 
-Nam accumsan dapibus auctor. Curabitur rutrum euismod ligula sed aliquam. Ut posuere, turpis id luctus 
-hendrerit, dolor magna varius mauris, sed blandit velit lorem sit amet eros. Quisque hendrerit viverra risus 
-quis sodales. Nunc ultrices varius sem, dictum pellentesque lacus hendrerit at. Nunc porta pellentesque 
+Nam accumsan dapibus auctor. Curabitur rutrum euismod ligula sed aliquam. Ut posuere, turpis id luctus
+hendrerit, dolor magna varius mauris, sed blandit velit lorem sit amet eros. Quisque hendrerit viverra risus
+quis sodales. Nunc ultrices varius sem, dictum pellentesque lacus hendrerit at. Nunc porta pellentesque
 fermentum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
 Vivamus bibendum in elit ut faucibus. Nullam elementum ligula ac erat facilisis sollicitudin. Aenean
-tempus pulvinar purus. Suspendisse consectetur lobortis gravida. Nam non est quis lorem porttitor iaculis 
-ultricies non metus. Phasellus molestie efficitur elementum. Curabitur sed eleifend lacus. 
-
-Nulla elementum posuere vulputate. Maecenas urna massa, cursus vitae nisi vitae, bibendum tempus 
-mauris. Phasellus aliquam hendrerit libero vel congue. Sed at massa ac nibh placerat porta. Aenean 
-tincidunt, augue ut blandit maximus, ex nulla tincidunt sem, vitae pulvinar nibh turpis a orci. Nulla in 
-luctus neque. Integer purus sem, vehicula id leo in, tristique feugiat nunc. Aenean sem orci, ullamcorper 
-nec luctus a, ullamcorper nec libero. Nunc feugiat accumsan turpis, nec viverra dolor faucibus non. Nullam 
-aliquet purus eget quam mattis, non consectetur libero congue. Curabitur tristique lectus nec nunc mattis 
-mattis. 
+tempus pulvinar purus. Suspendisse consectetur lobortis gravida. Nam non est quis lorem porttitor iaculis
+ultricies non metus. Phasellus molestie efficitur elementum. Curabitur sed eleifend lacus.

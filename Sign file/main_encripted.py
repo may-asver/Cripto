@@ -9,6 +9,8 @@ import nacl.secret as ncsecret
 import nacl.utils as ncutils
 
 # Global consts
+from nacl.encoding import HexEncoder
+
 SIZE_KEY = 32  # 32 bytes = 256 bits
 
 
