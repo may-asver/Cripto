@@ -28,11 +28,9 @@ def menu_operations():  # Menu operations
     # Show options
     print("1. Encrypt file")
     print("2. Decrypt file")
-    print("3. Sign file")
-    print("4. Verify sign")
     print("0. Exit")
     operation = int(input("?> "))
-    if operation < 0 or operation > 4:
+    if operation < 0 or operation > 2:
         print("Bad operation. Try again.")
         menu_operations()
     else:
